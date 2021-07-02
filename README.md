@@ -112,6 +112,8 @@ on disk outside of source control, or in some kind of key management infrastruct
 
 By default the library generates a short lived JWT per request. To generate a long lived
 JWT for multiple requests or to specify JWT claims directly use `Vonage::JWT.generate` and
+Need patch [nexmo-jwt](https://github.com/Nexmo/nexmo-jwt-ruby) for supporting [acl](https://developer.nexmo.com/conversation/guides/jwt-acl#paths)
+For proper work some endpoints, like `/beta/conversations` need generate token manually with jwt ruby
 the token option. For example:
 
 ```ruby
